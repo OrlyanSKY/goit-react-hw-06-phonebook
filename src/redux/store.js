@@ -25,10 +25,10 @@ const persistConfig = {
   whitelist: 'contacts',
 };
 
-const persistedReducers = persistReducer(persistConfig, rootReducer);
+const persistedRootReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: persistedReducers,
+  reducer: persistedRootReducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
